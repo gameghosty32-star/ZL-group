@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Grupo ZL - Conglomerado empresarial focado em soluções estratégicas, inovação e crescimento sustentável em Angola">
+    <meta name="theme-color" content="#00c6ff">
+    <title>Grupo ZL - Conectando Negócios, Criando Oportunidades</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+<style>
+    /* Container que se ajusta automaticamente ao formato do vídeo */
+    .video-container-auto {
+        position: relative;
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+        border-radius: 12px;
+        overflow: hidden;
+        background: #000;
+    }
+    
+    .video-container-auto iframe {
+        width: 100%;
+        height: auto;
+        min-height: 400px;
+        aspect-ratio: auto;
+        border-radius: 12px;
+        display: block;
+    }
+    
+    /* Para a grid de vídeos dos momentos */
+    .videos-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    /* Responsivo */
+    @media (max-width: 768px) {
+        .video-container-auto {
+            max-width: 100%;
+        }
+        
+        .videos-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        .video-container-auto iframe {
+            min-height: 500px;
+        }
+    }
+    
+    /* Para telas maiores com vídeos verticais */
+    @media (min-width: 769px) {
+        .videos-grid {
+            grid-template-columns: repeat(3, 1fr);
+            justify-items: center;
+        }
+    }
+</style>
+</head>
+<body>
+    <!-- HEADER/NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+        <div class="container-fluid px-4 px-lg-5">
+            <a class="navbar-brand fw-bold" href="index.html">
+                Grupo <span class="text-primary">ZL</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="empresas.html">Empresas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="servicos.html">Serviços</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="galeria.html">Galeria</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contactos">Contactos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION COM VÍDEO -->
+    <section class="hero-section" id="hero">
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="videos/hero-background.mp4" type="video/mp4">
+        </video>
+        <img src="img/empresa.webp" alt="Hero Background" class="hero-fallback">
+        <div class="hero-overlay"></div>
+        
+        <div class="container h-100 d-flex align-items-center justify-content-center">
+            <div class="text-center text-white hero-content">
+                <h1 class="display-3 fw-bold mb-3">
+                    Grupo <span class="text-primary">ZL</span>
+                </h1>
+                <h2 class="h3 fw-light mb-4">Conectando Negócios, Criando Oportunidades</h2>
+                
+                <p class="lead mb-4">
+                    Um conglomerado angolano focado em soluções estratégicas,
+                    inovação e crescimento sustentável.
+                </p>
+                
+                <p class="mb-5">
+                    O grupo ZL é um conglomerado empresarial diversificado que atua em sectores essenciais do desenvolvimento económico. Trabalhamos com profissionalismo, ética e visão estratégica, oferecendo soluções integradas para empresas, governos e indivíduos em Angola e no exterior.
+                </p>
+                
+                <div class="d-flex gap-3 justify-content-center flex-wrap">
+                    <a href="empresas.html" class="btn btn-primary btn-lg rounded-pill">
+                        Conheça as nossas empresas
+                    </a>
+                    <a href="https://wa.me/244944700134?text=Olá%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20vossos%20serviços." target="_blank" class="btn btn-outline-light btn-lg rounded-pill">
+                        Contactar o Grupo ZL
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- QUEM SOMOS -->
+    <section class="py-5 bg-light-gradient">
+        <div class="container py-5">
+            <h2 class="display-5 fw-bold text-center mb-5 text-dark">QUEM SOMOS</h2>
+            
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="space-y-4">
+                        <p class="lead text-dark">
+                            O <strong>Grupo ZL</strong> é uma estrutura empresarial moderna, sólida e multidisciplinar.
+                        </p>
+                        <p class="text-dark">
+                            Atuamos nos setores de viagens, consultoria, agronegócio, logística, transporte e limpeza profissional.
+                        </p>
+                        <p class="text-dark">
+                            Criamos oportunidades, fortalecemos parcerias e oferecemos soluções eficientes que impulsionam o crescimento.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="card border-start border-primary border-4 mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary fw-bold">Visão</h5>
+                            <p class="card-text text-dark">
+                                Ser um grupo empresarial mais influente e respeitado de África
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="card border-start border-primary border-4 mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary fw-bold">Nossa Missão</h5>
+                            <p class="card-text text-dark">
+                                Oferecer soluções integradas e inovadoras que contribuam para o desenvolvimento económico e institucional
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="card border-start border-primary border-4">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary fw-bold">Valores</h5>
+                            <p class="card-text text-dark">
+                                Inovação • Excelência • Ética • Responsabilidade • Crescimento • Parcerias Estratégicas
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                <img src="img/empresas/Grupo ZL.webp" alt="Grupo ZL Logo" class="img-fluid" style="max-width: 300px;">
+            </div>
+        </div>
+    </section>
+
+    <!-- MOMENTOS DA EMPRESA -->
+    <section class="py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold text-dark mb-3">MOMENTOS DA NOSSA EMPRESA</h2>
+                <p class="lead text-muted">Clique para ver mais fotos na galeria</p>
+            </div>
+            
+            <!-- Galeria de Imagens -->
+            <div class="row g-4 mb-5">
+                <div class="col-md-4">
+                    <a href="galeria.html" class="gallery-link">
+                        <img src="img/IMG-20251215-WA0037.webp" alt="Momento 1" class="img-fluid rounded gallery-img">
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="galeria.html" class="gallery-link">
+                        <img src="img/IMG-20251215-WA0038.webp" alt="Momento 2" class="img-fluid rounded gallery-img">
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="galeria.html" class="gallery-link">
+                        <img src="img/IMG-20251215-WA0039.webp" alt="Momento 3" class="img-fluid rounded gallery-img">
+                    </a>
+                </div>
+            </div>
+               <!-- Vídeos que se ajustam automaticamente -->
+        <div class="videos-grid">
+            <div class="video-container-auto">
+                <iframe src="https://player.vimeo.com/video/1162479411?autoplay=0&loop=1&title=0&byline=0&portrait=0&responsive=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="video-container-auto">
+                <iframe src="https://player.vimeo.com/video/1162479236?autoplay=0&loop=1&title=0&byline=0&portrait=0&responsive=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="video-container-auto">
+                <iframe src="https://player.vimeo.com/video/1162477872?autoplay=0&loop=1&title=0&byline=0&portrait=0&responsive=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- MENSAGEM DO CEO -->
+    <section class="py-5 bg-gradient-blue">
+        <div class="container py-5">
+            <h2 class="display-5 fw-bold text-center mb-5 text-white">Mensagem do Fundador & CEO</h2>
+            
+            <div class="row g-4 align-items-start">
+                <!-- Texto -->
+                <div class="col-lg-8">
+                    <div class="text-white text-justify space-y-4">
+                        <p>
+                            O Grupo ZL foi constituído com o objetivo de estruturar e desenvolver soluções empresariais integradas, sustentáveis e orientadas para elevados padrões de desempenho, em resposta às exigências de um mercado cada vez mais dinâmico e global.
+                        </p>
+                        <p>
+                            A atuação do Grupo ZL fundamenta-se em princípios rigorosos de governança corporativa, ética, profissionalismo e eficiência, abrangendo áreas estratégicas como turismo e viagens, comércio, consultoria empresarial, serviços corporativos e representação institucional, com atuação a nível nacional e internacional.
+                        </p>
+                        <p>
+                            O Grupo ZL pauta-se pelo estabelecimento de relações institucionais sólidas e duradouras, baseadas na confiança, na transparência e na criação de valor sustentável, contribuindo de forma consistente para o crescimento estruturado dos seus clientes, parceiros e demais stakeholders.
+                        </p>
+                        <p>
+                            Mantemos uma visão estratégica de longo prazo, orientada para a excelência operacional, a credibilidade institucional e a geração de resultados consistentes, assegurando o cumprimento das melhores práticas empresariais em todos os projetos que assumimos.
+                        </p>
+                    </div>
+                  <!-- Vídeo do CEO que se ajusta automaticamente -->
+                <div class="mt-4">
+                    <div class="video-container-auto" style="max-width: 100%;">
+                        <iframe src="https://player.vimeo.com/video/1162423878?autoplay=0&title=0&byline=0&portrait=0&responsive=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="min-height: 450px;"></iframe>
+                    </div>
+                </div>
+                    
+                <!-- Card CEO -->
+                <div class="col-lg-4">
+                    <div class="card bg-white bg-opacity-10 border-0 text-white text-center">
+                        <img src="img/ceo.webp" alt="Zinaldo Lucas - CEO" class="card-img-top rounded-top">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Zinaldo Lucas</h5>
+                            <p class="card-text text-primary">
+                                Fundador & Chief Executive Officer (CEO)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ESTATÍSTICAS -->
+    <section class="py-5 bg-light">
+        <div class="container py-5">
+            <h2 class="display-5 fw-bold text-center mb-5 text-dark">NOSSA TRAJETÓRIA</h2>
+            
+            <div class="row g-4 text-center">
+                <div class="col-md-6 col-lg-3">
+                    <div class="stat-box">
+                        <div class="stat-number" data-target="15">0</div>
+                        <p class="stat-label">Anos de Experiência</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="stat-box">
+                        <div class="stat-number" data-target="20">0</div>
+                        <p class="stat-label">Parceiros Globais</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="stat-box">
+                        <div class="stat-number" data-target="15000" data-format="k">0</div>
+                        <p class="stat-label">Clientes Satisfeitos</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="stat-box">
+                        <div class="stat-number" data-target="82" data-format="%">0</div>
+                        <p class="stat-label">Avaliações Positivas</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white py-5" id="contactos">
+        <div class="container py-5">
+            <div class="row g-5 mb-5">
+                <!-- Contactos -->
+                <div class="col-lg-6">
+                    <h5 class="text-primary fw-bold mb-4">CONTACTOS</h5>
+                    
+                    <div class="mb-4">
+                        <p class="text-muted small mb-2">Email</p>
+                        <a href="mailto:zlbusinessventures@hotmail.com" class="text-white text-decoration-none">
+                            zlbusinessventures@hotmail.com
+                        </a>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <p class="text-muted small mb-2">Telefones</p>
+                        <a href="tel:+244944700134" class="text-white text-decoration-none d-block">+244 944 700 134</a>
+                        <a href="tel:+244958268074" class="text-white text-decoration-none d-block">+244 958 268 074</a>
+                        <a href="tel:+244924325297" class="text-white text-decoration-none d-block">+244 924 325 297</a>
+                        <a href="tel:+351932775965" class="text-white text-decoration-none d-block">+351 932 775 965</a>
+                    </div>
+                    
+                    <div>
+                        <p class="text-muted small mb-2">Localização</p>
+                        <p class="text-white">
+                            Av. Pedro de Castro Van-Dúnem<br>
+                            Rua O Palanca<br>
+                            Edifício Maravilha<br>
+                            1º Andar, Dto<br>
+                            Luanda – Angola
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Formulário -->
+                <div class="col-lg-6">
+                    <h5 class="text-primary fw-bold mb-4">FALE CONNOSCO</h5>
+                    <form id="contactForm">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" id="nome" placeholder="Nome" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" id="email" placeholder="Email" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="tel" class="form-control" id="telefone" placeholder="Telefone" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" id="assunto" placeholder="Assunto" required>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" id="mensagem" rows="4" placeholder="Mensagem" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 rounded-pill">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Parceiros -->
+            <div class="row mb-5">
+                <div class="col-12">
+                    <h5 class="text-primary fw-bold mb-3">PARCEIROS ESTRATÉGICOS</h5>
+                    <p class="text-muted mb-2">Trabalhamos com parceiros em:</p>
+                    <p class="text-white">
+                        • Angola • Camarões • Estados Unidos • Emirates Árabes Unidos
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Bottom Footer -->
+            <div class="border-top pt-4 d-flex justify-content-between align-items-center flex-wrap gap-3">
+                <p class="text-muted mb-0">© <strong>2025 Grupo ZL.</strong> Todos os direitos reservados.</p>
+                <div class="d-flex gap-3">
+                    <a href="#" class="text-white text-decoration-none">
+                        <img src="img/Facebook.webp" alt="Facebook" style="height: 30px;">
+                    </a>
+                    <a href="#" class="text-white text-decoration-none">
+                        <img src="img/Instagram.webp" alt="Instagram" style="height: 30px;">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BOTÃO WHATSAPP FLUTUANTE -->
+    <a href="https://wa.me/244944700134" target="_blank" class="whatsapp-btn" title="Contactar via WhatsApp">
+        <img src="img/WhatsApp.webp" alt="WhatsApp">
+    </a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>

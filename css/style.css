@@ -1,0 +1,623 @@
+/* ============================================
+   GRUPO ZL - CUSTOM CSS
+   Bootstrap 5 + Custom Styling
+   ============================================ */
+
+:root {
+    --primary: #00c6ff;
+    --primary-dark: #00a3d9;
+    --secondary: #0a3a52;
+    --light-bg: #f8f9fa;
+    --dark-bg: #1a1a1a;
+    --text-dark: #333333;
+    --text-light: #666666;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+.display-3, .display-4, .display-5 {
+    font-family: 'Playfair Display', serif;
+}
+
+/* ============================================
+   NAVBAR
+   ============================================ */
+
+.navbar {
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    color: var(--text-dark) !important;
+}
+
+.navbar-brand span {
+    color: var(--primary) !important;
+}
+
+.navbar-nav .nav-link {
+    color: var(--text-dark) !important;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    margin-left: 1rem;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--primary) !important;
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--primary) !important;
+}
+
+body {
+    padding-top: 60px;
+}
+
+/* Corrigir overflow horizontal */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Garantir que o navbar não ultrapasse a largura */
+.navbar {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+.navbar .container-fluid {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* Corrigir possíveis problemas com elementos filho */
+.navbar-nav {
+    width: 100%;
+}
+
+.navbar-collapse {
+    max-width: 100%;
+}
+
+/* Garantir que nenhum elemento ultrapasse a viewport */
+* {
+    box-sizing: border-box;
+}
+
+/* Corrigir responsividade em dispositivos móveis */
+@media (max-width: 991px) {
+    .navbar .container-fluid {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+
+.hero-section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-top: -60px;
+    padding-top: 60px;
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.hero-fallback {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    display: none;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 2;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    max-width: 800px;
+    animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-content .display-3 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.hero-content .h3 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.hero-content .lead {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        height: 80vh;
+    }
+    
+    .hero-content .display-3 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-content .h3 {
+        font-size: 1.2rem;
+    }
+    
+    .hero-content .lead {
+        font-size: 1rem;
+    }
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+
+.btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: #000;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+    color: #000;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 198, 255, 0.3);
+}
+
+.btn-outline-light {
+    border-color: white;
+    color: white;
+    font-weight: 600;
+}
+
+.btn-outline-light:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: white;
+    color: white;
+}
+
+.rounded-pill {
+    border-radius: 50px !important;
+    padding: 0.75rem 2rem !important;
+}
+
+/* ============================================
+   SECTIONS & BACKGROUNDS
+   ============================================ */
+
+.bg-light-gradient {
+    background: linear-gradient(135deg, #f0f8ff 0%, #e0f7ff 100%);
+}
+
+.bg-gradient-blue {
+    background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+}
+
+/* ============================================
+   CARDS
+   ============================================ */
+
+.card {
+    border: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-title {
+    margin-bottom: 0.75rem;
+}
+
+.card-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* ============================================
+   GALLERY
+   ============================================ */
+
+.gallery-link {
+    text-decoration: none;
+    display: block;
+    overflow: hidden;
+    border-radius: 0.5rem;
+}
+
+.gallery-img {
+    transition: transform 0.3s ease;
+    display: block;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.gallery-link:hover .gallery-img {
+    transform: scale(1.05);
+}
+
+/* ============================================
+   VIDEO CONTAINER
+   ============================================ */
+
+.video-container {
+    background-color: #000;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ============================================
+   STATISTICS
+   ============================================ */
+
+.stat-box {
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--primary);
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 1rem;
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+footer {
+    background: linear-gradient(135deg, #1a1a1a 0%, #0f2027 50%, #1a3a4a 100%);
+    color: white;
+}
+
+footer a {
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--primary) !important;
+}
+
+footer .text-primary {
+    color: var(--primary) !important;
+}
+
+footer .form-control {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+footer .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+footer .form-control:focus {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-color: var(--primary);
+    color: white;
+    box-shadow: 0 0 0 0.2rem rgba(0, 198, 255, 0.25);
+}
+
+/* ============================================
+   WHATSAPP BUTTON
+   ============================================ */
+
+.whatsapp-btn {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 60px;
+    height: 60px;
+    background-color: #26d466;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    z-index: 999;
+    text-decoration: none;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.whatsapp-btn img {
+    width: 50px;
+    height: 50px;
+}
+
+@media (max-width: 768px) {
+    .whatsapp-btn {
+        bottom: 1rem;
+        right: 1rem;
+        width: 50px;
+        height: 50px;
+    }
+    
+    .whatsapp-btn img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+
+.text-justify {
+    text-align: justify;
+}
+
+.space-y-4 > * + * {
+    margin-top: 1.5rem;
+}
+
+.space-y-4 > p {
+    margin-bottom: 1.5rem;
+}
+
+.text-primary {
+    color: var(--primary) !important;
+}
+
+.text-muted {
+    color: #6c757d !important;
+}
+
+.border-start {
+    border-left: 4px solid var(--primary) !important;
+}
+
+.border-4 {
+    border-width: 4px !important;
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-slide-in-down {
+    animation: slideInDown 0.5s ease-out;
+}
+
+.animate-slide-in-up {
+    animation: slideInUp 0.5s ease-out;
+}
+
+/* ============================================
+   PAGE HEADER
+   ============================================ */
+
+.page-header {
+    background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+    margin-top: 60px;
+}
+
+.page-header .btn-link {
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.page-header .btn-link:hover {
+    color: #00c6ff !important;
+    transform: translateX(-5px);
+}
+
+/* ============================================
+   SERVICE CARDS
+   ============================================ */
+
+.service-card {
+    border: none;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.service-img {
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-img {
+    transform: scale(1.05);
+}
+
+.service-card:hover {
+    box-shadow: 0 12px 30px rgba(0, 198, 255, 0.2);
+}
+
+/* ============================================
+   RESPONSIVE ADJUSTMENTS
+   ============================================ */
+
+@media (max-width: 992px) {
+    .navbar-nav .nav-link {
+        margin-left: 0;
+        padding: 0.5rem 0;
+    }
+    
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .display-5 {
+        font-size: 2rem;
+    }
+    
+    .lead {
+        font-size: 1rem;
+    }
+    
+    .stat-number {
+        font-size: 2.5rem;
+    }
+    
+    .stat-label {
+        font-size: 0.9rem;
+    }
+    
+    .d-flex.gap-3 {
+        flex-direction: column;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+}
+
+/* ============================================
+   SCROLLBAR
+   ============================================ */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-dark);
+}
+
+/* ============================================
+   TRANSITIONS
+   ============================================ */
+
+* {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+button, a, input, textarea, select {
+    transition: all 0.3s ease;
+}
