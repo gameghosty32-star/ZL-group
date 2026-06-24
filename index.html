@@ -11,6 +11,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Modern Animations -->
+    <link rel="stylesheet" href="css/modern-animations.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
 <style>
@@ -68,6 +70,14 @@
 </style>
 </head>
 <body>
+    <!-- PAGE LOADER -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-content">
+            <canvas id="loaderCanvas" width="120" height="120"></canvas>
+            <p class="loader-text">CARREGANDO...</p>
+        </div>
+    </div>
+
     <!-- HEADER/NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
         <div class="container-fluid px-4 px-lg-5">
@@ -120,7 +130,7 @@
                 </p>
                 
                 <p class="mb-5">
-                    O grupo ZL é um conglomerado empresarial diversificado que atua em sectores essenciais do desenvolvimento económico. Trabalhamos com profissionalismo, ética e visão estratégica, oferecendo soluções integradas para empresas, governos e indivíduos em Angola e no exterior.
+                    O grupo ZL é um conglomerado empresarial diversificado que atua em sectores essenciais do desenvolvimento económico. Trabalhamos com profissionalismo, ética e visão estratégica.
                 </p>
                 
                 <div class="d-flex gap-3 justify-content-center flex-wrap">
@@ -217,7 +227,7 @@
                     </a>
                 </div>
             </div>
-               <!-- Vídeos que se ajustam automaticamente -->
+                <!-- Vídeos que se ajustam automaticamente -->
         <div class="videos-grid">
             <div class="video-container-auto">
                 <iframe src="https://player.vimeo.com/video/1162479411?autoplay=0&loop=1&title=0&byline=0&portrait=0&responsive=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
@@ -241,22 +251,22 @@
                 <div class="col-lg-8">
                     <div class="text-white text-justify space-y-4">
                         <p>
-                            O Grupo ZL foi constituído com o objetivo de estruturar e desenvolver soluções empresariais integradas, sustentáveis e orientadas para elevados padrões de desempenho, em resposta às exigências de um mercado cada vez mais dinâmico e global.
+                            O Grupo ZL foi constituído com o objetivo de estruturar e desenvolver soluções empresariais integradas, sustentáveis e orientadas para elevados padrões de desempenho.
                         </p>
                         <p>
-                            A atuação do Grupo ZL fundamenta-se em princípios rigorosos de governança corporativa, ética, profissionalismo e eficiência, abrangendo áreas estratégicas como turismo e viagens, comércio, consultoria empresarial, serviços corporativos e representação institucional, com atuação a nível nacional e internacional.
+                            A atuação do Grupo ZL fundamenta-se em princípios rigorosos de governança corporativa, ética, profissionalismo e eficiência, abrangendo áreas estratégicas como consultoria, logística, agronegócio e viagens internacionais.
                         </p>
                         <p>
-                            O Grupo ZL pauta-se pelo estabelecimento de relações institucionais sólidas e duradouras, baseadas na confiança, na transparência e na criação de valor sustentável, contribuindo de forma consistente para o crescimento estruturado dos seus clientes, parceiros e demais stakeholders.
+                            O Grupo ZL pauta-se pelo estabelecimento de relações institucionais sólidas e duradouras, baseadas na confiança, na transparência e na criação de valor sustentável.
                         </p>
                         <p>
-                            Mantemos uma visão estratégica de longo prazo, orientada para a excelência operacional, a credibilidade institucional e a geração de resultados consistentes, assegurando o cumprimento das melhores práticas empresariais em todos os projetos que assumimos.
+                            Mantemos uma visão estratégica de longo prazo, orientada para a excelência operacional, a credibilidade institucional e a geração de resultados consistentes.
                         </p>
                     </div>
                   <!-- Vídeo do CEO que se ajusta automaticamente -->
                 <div class="mt-4">
                     <div class="video-container-auto" style="max-width: 100%;">
-                        <iframe src="https://player.vimeo.com/video/1162423878?autoplay=0&title=0&byline=0&portrait=0&responsive=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="min-height: 450px;"></iframe>
+                        <iframe src="https://player.vimeo.com/video/1162423878?autoplay=0&title=0&byline=0&portrait=0&responsive=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
                     
@@ -402,6 +412,8 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Animations JS -->
+    <script src="js/animations.js"></script>
     <!-- Custom JS -->
     <script src="js/script.js"></script>
 </body>
